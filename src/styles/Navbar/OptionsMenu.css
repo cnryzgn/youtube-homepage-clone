@@ -1,0 +1,89 @@
+.options-menu-container {
+    width: 327px;
+    height: 100vh;
+    background-color: #222;
+    box-shadow: 0px 0px 1px #999;
+    border-radius: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    right: 60px;
+    display: none;
+    z-index: 100;
+}
+
+.options-menu-container .menu-top {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-top {
+    border-bottom: 1px solid #999;
+}
+
+.menu-top > img {
+    width: 47px;
+    height: 47px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.menu-top > .top-details {
+    margin-left: 10px;
+}
+
+.menu-top h2 {
+    font-size: 1.1rem;
+}
+
+.top-details > a {
+    display: inline-block;
+    margin-top: 7px;
+    font-size: .950rem;
+    color: #008cff;
+    text-decoration: none;
+}
+
+.right-arrow {
+    margin-left: auto;
+}
+
+
+.menu-middle > a,
+.menu-bottom > a{
+    text-decoration: none;
+    font-size: .850rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.menu-middle a > div,
+.menu-bottom a > div {
+    padding-left: 20px;
+}
+
+.menu-middle > a:hover,
+.menu-bottom > a:hover {
+    background-color: #8888;
+}
+
+
+/** Middle **/
+
+.menu-middle {
+    width: 100%;
+}
+
+
+
+/** Bottom **/
+
+
+.options-menu-container::-webkit-scrollbar-thumb {
+    border-radius: 0%;
+    background-color: #ccc;
+}

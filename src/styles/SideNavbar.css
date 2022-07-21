@@ -1,0 +1,179 @@
+@import url('./SideNavbar/Channel.css');
+
+.sideNav {
+    width: 16%;
+    height: 92vh;
+    position: fixed;
+    top: 8.5vh;
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+
+.sideNav:hover .sideNav::-webkit-scrollbar-thumb {
+    background-color: #999 !important;
+}
+
+.sideNav > a:first-child {
+    margin-top: 15px;
+}
+
+.sideNav > a {
+    padding-block: 10px;
+    padding-left: 25px;
+    margin-right: 5px;
+    text-decoration: none;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    color: #eee;
+    cursor: pointer;
+    outline: none;
+}
+
+.sideNav > a > div {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.sideNav > a:focus,
+.sideNav > a:active {
+    background-color: #555 !important;
+}
+
+.sideNav > a:not(.channel-container):focus > div {
+    font-weight: bold;
+}
+
+.sideNav > a:hover {
+    background-color: #333;
+}
+
+#line {
+    margin-right: 8px;
+    border-bottom : 1px solid #555;
+    margin-block: 13px;
+}
+
+h3 {
+    font-size: 13.5px;
+    color: #ccc;
+    margin-top: 13px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.bottom-links {
+    margin-bottom: 25px;
+}
+
+.sideNav .bottom-links > div{
+    margin-left: 22px;
+    margin-bottom: 1px;
+}
+
+.bottom-links div > a {
+    text-decoration: none;
+    color: #a7a4a4;
+    font-size: 12.5px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#copy-right-line {
+    color: #777;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+/** MEDIA **/
+
+@media (max-width: 1300px) and (min-width: 801px) {
+    .sideNav {
+        width: 85px;
+        overflow: hidden;
+    }
+
+    .sideNav > a {
+        padding-left: 0px;
+        margin-right: 0px ;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 0px ;
+        width: 100%;
+    }
+
+    .sideNav > a > div {
+        font-size: 11px;
+        margin-top: 10px;
+        margin-left: 0px ;
+    }
+
+    .sideNav > *:not(.responsive-nav) {
+        display: none !important;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .sideNav {
+        width: 195px;
+        display: none;
+        position: relative;
+    }
+
+    #sideNavOpen {
+        display: block;
+        transform: translateX(-100%);
+        animation: slidingOpen .420s linear forwards;
+        position: fixed; /*??????????????*/
+    }
+
+    #sideNavClose {
+        display: block;
+        transform: translateX(-100%);
+        animation: slidingClose .250s linear forwards;
+    }
+
+    .sideNav > * {
+        display: block;
+    }
+
+    @keyframes slidingOpen {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slidingClose {
+        from {
+            transform: translateX(0%);
+        }        
+        
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+/** Scroll Bar **/ 
+
+.sideNav::-webkit-scrollbar { background-color: #222; }
+
+.sideNav::-webkit-scrollbar-thumb { background-color: #888; }
+
+/* Hidden default */
+.sideNav::-webkit-scrollbar-thumb { visibility: hidden; }
+
+.sideNav:hover::-webkit-scrollbar-thumb { visibility: visible; }
+
+/****************/

@@ -1,0 +1,11 @@
+.channel-container > img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+.channel-container > div {
+    margin-left: 20px;
+    color: #eee;
+}

@@ -1,0 +1,22 @@
+@import url('./Navbar.css');
+@import url('./SideNavbar.css');
+@import url('./Main.css');
+
+* { padding: 0px; margin: 0px; box-sizing: border-box; }
+
+body {
+    height: 120vh;
+    background-color: #1a1919;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #1a1919;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 15px;
+}

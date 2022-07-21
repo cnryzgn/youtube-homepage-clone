@@ -1,0 +1,108 @@
+@import url('./Navbar/Searcbar.css');
+@import url('./Navbar/Options.css');
+
+nav {
+    width: 100%;
+    min-height: 9vh;
+    background-color: rgba(34, 34, 34, 0.980);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    border-bottom: 1px solid #333;
+    z-index: 1;
+}
+
+nav .icon-side {
+    display: flex;
+}
+
+nav .toggle-bar {
+    margin-inline: 20px;
+    cursor: pointer;
+    padding: 7px 4px;
+    border-radius: 50%;
+}
+
+nav .toggle-bar > div {
+    width: 19px;
+    height: 1px;
+    margin: 5px;
+    background-color: #eee;
+}
+
+nav .toggle-bar:active {
+    background-color: rgba(153, 153, 153, 0.3);
+}
+
+nav .youtube-icon-container {
+    width: 56%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#youtube-icon {
+    font-size: 1.7rem;
+    color: red;
+    position: relative;
+}
+
+#youtube-icon::after {
+    content: '';
+    width: 17px;
+    height: 13px;
+    margin: 20px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #fff;
+    z-index: -1;
+}
+
+.youtube-icon-container > h2 {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    letter-spacing: -1.50px;
+    display: inline-block;
+    color: #fff;
+    margin-inline: 3px;
+}
+
+.youtube-icon-container > span {
+    font-family: sans-serif;
+    display: inline-block;
+    color: #ccc;
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 720px) {
+    .search-container {
+        margin-right: 20px;
+        align-items: center;
+    }
+
+    .searchbar {
+        display: none;
+    }
+    
+    .search-container > button {
+        padding: 0px;
+        margin-left: auto;
+        margin-right: 15px;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    #notification-bell {
+        background-color: transparent;
+        padding: 0px;
+    }
+
+    /* Toggle Open Searchbbar */
+    .openSearchBar {
+        display: block;
+    }
+}
